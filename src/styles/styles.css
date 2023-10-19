@@ -1,0 +1,79 @@
+body{
+    box-sizing: border-box;
+    margin: 50px 0;
+    padding: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+.App {
+    background:  #f7f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin: 0 auto;
+  }
+
+header{
+    flex-basis: 300px;
+    border-radius: 4px;
+  }
+  
+.enter-tasks{
+    flex-basis: 60px;
+    margin: 30px 0 10px 0;
+  }
+
+.layoutEnterTasks{
+  display: flex;
+  justify-content: space-between;
+}
+
+select{
+  cursor: pointer;
+}
+
+button{
+  color: white;
+  background: #007bff;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.tasks{
+  flex-basis: 200px;
+}
+
+.header-container{
+  position: relative;
+}
+
+.header-container img{
+  border-radius: 8px;
+  width: 100%;
+}
+
+.todo-label{
+  padding: 4px 8px;
+  color: white;
+  background: rgba(0, 0, 0, .6);
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+
+}
+
+#field{
+    padding: 8px;
+    min-width: 420px;
+    border-radius: 5px;
+    border-color: black
+}
