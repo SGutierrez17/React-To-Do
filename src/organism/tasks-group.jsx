@@ -1,25 +1,10 @@
 import React from "react";
 
+import Task from '../molecules/task';
 
-export default function TasksGroup({taskList, onDeleteClickTask}) {
-  const [addTaskIpt, setAddTaskIpt] = React.useState("");
 
-  const handleInputChange = (e) => {
-    setAddTaskIpt(e.target.value);
-  }
+export default function TasksGroup({taskList, onDeleteTask}) {
 
-  return (
-    <ul>
-      {
-        taskList.map((task) => (
-          <li>
-            <input type="text" name='field' id='field' value={task} onChange={handleInputChange}/>  
-            <button onClick={() => onDeleteClickTask(addTaskIpt)}>Delete</button>   
-          </li>
-        ))
-      }
-    </ul>
-    
-  )
+  return taskList.map((task, idx) => <Task key = {`task-${idx}`}  taskText = {task} onDeleteTask = {onDeleteTask}/>);
 }
 

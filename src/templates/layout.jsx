@@ -1,11 +1,11 @@
 export default function Layout({children}) {
-const [headerComponent, enterTasksComponent, tasksComponent] = children;
+const [headerComponent, addTasksComponent, tasksGroupComponent] = children;
 
   return (
     <div className="App">
     <header>{headerComponent}</header>
-    <div className="enter-tasks">{enterTasksComponent}</div>
-    <div className="tasks">{tasksComponent}</div>
+    <div className="add-task">{addTasksComponent}</div>
+    <div className="tasks-group">{tasksGroupComponent}</div>
     </div>
   )
 }

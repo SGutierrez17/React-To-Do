@@ -1,39 +1,11 @@
 body{
-    box-sizing: border-box;
-    margin: 50px 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 0;
 }
 
 *,*::before,*::after{
     box-sizing: inherit;
-}
-
-.App {
-    background:  #f7f9fc;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 600px;
-    margin: 0 auto;
-  }
-
-header{
-    flex-basis: 300px;
-    border-radius: 4px;
-  }
-  
-.enter-tasks{
-    flex-basis: 60px;
-    margin: 30px 0 10px 0;
-  }
-
-.layoutEnterTasks{
-  display: flex;
-  justify-content: space-between;
-}
-
-select{
-  cursor: pointer;
 }
 
 button{
@@ -45,8 +17,19 @@ button{
   cursor: pointer;
 }
 
-.tasks{
-  flex-basis: 200px;
+.App {
+  background:  #f7f9fc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+header{
+  flex-basis: 300px;
+  border-radius: 4px;
 }
 
 .header-container{
@@ -58,22 +41,72 @@ button{
   width: 100%;
 }
 
-.todo-label{
-  padding: 4px 8px;
-  color: white;
-  background: rgba(0, 0, 0, .6);
-  font-size: 32px;
-  font-weight: 700;
-  border-radius: 4px;
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-
+.tasks-group{
+  max-height: 230px;
+  overflow: auto;
 }
 
-#field{
-    padding: 8px;
-    min-width: 420px;
-    border-radius: 5px;
-    border-color: black
+select{
+  cursor: pointer;
+}
+
+.header-todo-label {
+  padding: 4px 8px;
+  background: rgba(0,0,0,.5);
+  border-radius: 4px;
+  bottom: 25px;
+  color: white;
+  background: rgba(0,0,0,.8);
+  font-size: 24px;
+  font-weight: 700px;
+  border-radius: 4px;
+  left: 20px;
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}
+
+.add-task {
+  padding: 10px 0;
+}
+
+.add-task div:first-child {
+  flex-basis: 70%;
+}
+
+.add-task div:last-child {
+  flex: 1;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.add-task input {
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.task-container {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  display: flex;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.task-container * {
+  flex: 1;
+}
+
+.task-container div:first-child {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.task-container div:last-child {
+  text-align: right;
 }

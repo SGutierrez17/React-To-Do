@@ -1,24 +1,27 @@
 import React from "react"
 
-export default function AddTasks({onAddClickTask}) {
-  const [addTaskIpt, setAddTaskIpt] = React.useState("");
+export default function AddTask({onAddClick}) {
+    const [addTaskIpt, setAddTaskIpt] = React.useState('');
+    const handleInputChange = (e) => {
+        setAddTaskIpt(e.target.value);
+    };
 
-  const handleInputChange = (e) => {
-    setAddTaskIpt(e.target.value);
-  }
+  const handleOnAddClick = (e) => {
+    e.preventDefault();
+
+    onAddClick(addTaskIpt);
+    setAddTaskIpt('');
+};
 
   return (
-  <div className="layoutEnterTasks">
-  <input type="text" name='field' id='field' placeholder='Enter task...' value={addTaskIpt} onChange={handleInputChange}/> 
-    {/* <div className="options">
-    <select name="field" id="field">
-      <option value="Enter task">Enter task...</option>
-      <option value="Clean car">Clean car</option>
-      <option value="Wax car">Wax car</option>
-      <option value="Pay credit card">Pay credit card</option>
-      <option value="Pay cash">Pay cash</option>
-    </select>
-    </div> */}
-    <button onClick={() => onAddClickTask(addTaskIpt)}>Add</button>     
-      </div>
+    <form  onSubmit={handleOnAddClick}>
+    <div className="add-task">
+                <div>
+                    <input type="text" name="add-task-ipt" id="add-task-ipt" value = {addTaskIpt} onChange={handleInputChange} placeholder="  Enter Task..."/>
+                </div>
+                <div>
+                    <button className="task-btn" onClick={handleOnAddClick} type="submit" >Add</button>
+                </div>
+                </div>
+</form>
 )}
