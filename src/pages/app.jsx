@@ -5,7 +5,6 @@ import Header from "../molecules/header";
 import Layout from '../templates/layout';
 import TasksGroup from "../organism/tasks-group";
 
-
 function App() {
   const [tasks, setTasks] = React.useState([]);
 
@@ -23,7 +22,6 @@ function App() {
     setTasks(filteredTasksList);
   }
   
-
   return (
     <Layout> 
       <Header />
